@@ -26,7 +26,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.codelabs.state.ui.theme.BasicStateCodelabTheme
 
 @Composable
 fun WellnessTaskItem(
@@ -53,5 +55,13 @@ fun WellnessTaskItem(
         IconButton(onClick = onClose) {
             Icon(Icons.Filled.Close, contentDescription = "Close")
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun WelnessTaskItemPreview(){
+    BasicStateCodelabTheme {
+//        WellnessTaskItem(taskName = "This is a task", checked = false, onClose = {})
     }
 }
