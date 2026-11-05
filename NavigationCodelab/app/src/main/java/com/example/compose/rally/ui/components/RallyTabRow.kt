@@ -33,7 +33,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.compose.rally.RallyDestination
 import java.util.Locale
+import androidx.compose.ui.platform.LocalLocale
 
 @Composable
 fun RallyTabRow(
@@ -102,7 +103,7 @@ private fun RallyTab(
                 onClick = onSelected,
                 role = Role.Tab,
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(
+                indication = ripple(
                     bounded = false,
                     radius = Dp.Unspecified,
                     color = Color.Unspecified
@@ -113,7 +114,7 @@ private fun RallyTab(
         Icon(imageVector = icon, contentDescription = text, tint = tabTintColor)
         if (selected) {
             Spacer(Modifier.width(12.dp))
-            Text(text.uppercase(Locale.getDefault()), color = tabTintColor)
+            Text(text.uppercase(LocalLocale.current.platformLocale), color = tabTintColor)
         }
     }
 }

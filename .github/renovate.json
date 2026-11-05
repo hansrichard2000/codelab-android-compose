@@ -1,17 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base", "group:all", ":dependencyDashboard", "schedule:daily"
+    "config:recommended",
+    "group:all",
+    ":dependencyDashboard",
+    "schedule:daily"
   ],
-  "baseBranches": [
-    "main", "end"
+  "baseBranchPatterns": [
+    "main",
+    "end"
   ],
   "packageRules": [
     {
       "groupName": "Kotlin Dependencies",
-      "matchPackagePrefixes": [
-        "org.jetbrains.kotlin",
-        "^androidx.compose.compiler"
+      "matchDatasources": [
+        "maven"
+      ],
+      "registryUrls": [
+        "https://dl.google.com/dl/android/maven2/",
+        "https://repo.maven.apache.org/maven2/"
+      ],
+      "matchPackageNames": [
+        "org.jetbrains.kotlin{/,}**",
+        "androidx.compose.compiler{/,}**"
       ]
     }
   ]

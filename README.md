@@ -7,11 +7,11 @@ For more information about Jetpack Compose, please [read the documentation](http
 
 ## 💻 Requirements
 
-[Android Studio Chipmunk](https://developer.android.com/studio).
+[Latest version of Android Studio](https://developer.android.com/studio).
 
 ## 🧬 Codelabs
 
-### [Basics codelabs](https://developer.android.com/codelabs/jetpack-compose-basics)
+### [Basics codelab](https://developer.android.com/codelabs/jetpack-compose-basics)
 
 Go hands-on and learn the fundamentals of declarative UI, working with state, layouts and theming.
 
@@ -42,6 +42,10 @@ Learn how to use Jetpack Compose Animation APIs.
 Learn how to use the Jetpack Navigation library in Compose, navigate within your application,
 navigate with arguments, support deep-links, and test your navigation.
 
+### [Performance codelab](https://developer.android.com/codelabs/jetpack-compose-performance)
+
+Learn how to measure, investigate and improve the runtime performance of a Compose app.
+
 ### [Testing codelab](https://developer.android.com/codelabs/jetpack-compose-testing)
 
 Learn about testing Jetpack Compose UIs. Write your first tests, and learn about testing in
@@ -52,7 +56,7 @@ isolation, debugging tests, the semantics tree, and test synchronization.
 Learn about the various ways to improve an app’s accessibility. Increase touch target sizes, add
 content descriptions, create custom actions, and more.
 
-### [Adaptive codelab](https://developer.android.com/codelabs/jetpack-compose-adaptability)
+### [Adaptive codelab](https://codelabs.developers.google.com/jetpack-compose-adaptability)
  
 Learn how to build adaptive apps for phones, tablets and foldables with Jetpack Compose. Improve 
 reachability and ergonomics of your app with Material navigation components. 

@@ -21,13 +21,14 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:8.0.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
+        classpath "com.android.tools.build:gradle:9.4.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.10"
+        classpath "org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.3.10"
     }
 }
 
 plugins {
-    id 'com.diffplug.spotless' version '6.19.0'
+    id 'com.diffplug.spotless' version '8.10.2'
 }
 
 subprojects {
@@ -60,7 +61,7 @@ subprojects {
             freeCompilerArgs += '-opt-in=kotlinx.coroutines.FlowPreview'
 
             // Set JVM target to 1.8
-            jvmTarget = "1.8"
+            jvmTarget = "17"
         }
     }
 }

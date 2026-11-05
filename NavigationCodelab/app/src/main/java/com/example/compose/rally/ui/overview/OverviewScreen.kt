@@ -35,7 +35,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -57,6 +57,7 @@ import com.example.compose.rally.ui.components.RallyAlertDialog
 import com.example.compose.rally.ui.components.RallyDivider
 import com.example.compose.rally.ui.components.formatAmount
 import java.util.Locale
+import androidx.compose.ui.platform.LocalLocale
 
 @Composable
 fun OverviewScreen(
@@ -97,7 +98,7 @@ private fun AlertCard() {
                 showDialog = false
             },
             bodyText = alertMessage,
-            buttonText = "Dismiss".uppercase(Locale.getDefault())
+            buttonText = "Dismiss".uppercase(LocalLocale.current.platformLocale)
         )
     }
     Card {
@@ -162,7 +163,7 @@ private fun AlertItem(message: String) {
                 .align(Alignment.Top)
                 .clearAndSetSemantics {}
         ) {
-            Icon(Icons.Filled.Sort, contentDescription = null)
+            Icon(Icons.AutoMirrored.Filled.Sort, contentDescription = null)
         }
     }
 }
